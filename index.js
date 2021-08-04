@@ -38,9 +38,6 @@ app.get('*', (req, res) => {
 
 mongoUrl = mongoUrl.join('');
 
-// mongoUrl =
-// 	'mohit:PQ7mbndPS63EIcjk@merndb.bxegw.gcp.mongodb.net/mern-app-test?retryWrites=true&w=majority';
-
 // start server
 app.listen(config.get('server.port'), function() {
 	mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, (err) => {
